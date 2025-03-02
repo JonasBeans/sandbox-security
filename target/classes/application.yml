@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost/security
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/sandbox
+          jwk-set-uri: http://localhost:8081/realms/sandbox/protocol/openid-connect/certs
+          auth:
+            converter:
+              resource-id: sandbox-application
+              principle-attribute: preferred_username
+jwt:
+  auth:
+    converter:
+      resource-id: sandbox-application
+      principle-attribute: preferred_username
