@@ -6,8 +6,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8081/realms/sandbox
-          jwk-set-uri: http://localhost:8081/realms/sandbox/protocol/openid-connect/certs
+          issuer-uri: http://localhost:9090/realms/bns
+          jwk-set-uri: http://localhost:9090/realms/bns/protocol/openid-connect/certs
           auth:
             converter:
               resource-id: sandbox-application
