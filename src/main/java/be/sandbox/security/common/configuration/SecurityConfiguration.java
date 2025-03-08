@@ -29,8 +29,7 @@ public class SecurityConfiguration {
                         .anyRequest().authenticated()
                 )
                 .oauth2ResourceServer(
-                        oauth2 -> oauth2.jwt()
-                        .jwtAuthenticationConverter(jwtAuthConverter)
+                        oauth2 -> oauth2.jwt(token -> token.jwtAuthenticationConverter(jwtAuthConverter))
                 )
                 .build();
     }

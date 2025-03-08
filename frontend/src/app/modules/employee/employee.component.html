@@ -1,0 +1,7 @@
+<button (click)="getEmployees()" mat-stroked-button>
+	GET EMPLOYEE
+</button>
+<div *ngIf="employee">
+	<p>First name {{employee?.firstName}}</p>
+	<p>Last name {{employee?.lastName}}</p>
+</div>
