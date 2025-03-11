@@ -10,10 +10,10 @@ export class EmployeeService {
 
 	private httpClient : HttpClient = inject(HttpClient);
 
-	getAllEmployees(): Observable<Employee> {
-		return this.httpClient.get<Employee>("http://localhost:8080/api/employee")
+	getAllEmployees(): Observable<Employee[]> {
+		return this.httpClient.get<Employee[]>("http://localhost:8080/api/employees")
 			.pipe(
-				catchError(this.handleError<Employee>('get employees'))
+				catchError(this.handleError<Employee[]>('get employees'))
 			);
 	}
 

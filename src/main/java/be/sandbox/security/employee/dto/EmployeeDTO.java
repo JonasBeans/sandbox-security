@@ -2,6 +2,7 @@ package be.sandbox.security.employee.dto;
 
 import be.sandbox.security.employee.entity.EmployeeEntity;
 import lombok.Builder;
+import lombok.NonNull;
 
 @Builder
 public record EmployeeDTO(
